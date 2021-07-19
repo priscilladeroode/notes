@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class PrimaryButton extends StatelessWidget {
   final String label;
   final Function() onPressed;
+  final double width;
   const PrimaryButton({
     Key? key,
     required this.label,
     required this.onPressed,
+    this.width = 250,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: 250,
+          width: width,
           child: ElevatedButton(
             onPressed: onPressed,
             child: Text(label),
